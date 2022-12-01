@@ -51,13 +51,13 @@ class Comment(models.Model):
 class Follow(models.Model):
     user = models.ForeignKey(
         User,
-        related_name='user',
+        related_name='follower',
         verbose_name='Подписчик',
         on_delete=models.CASCADE,
     )
     following = models.ForeignKey(
         User,
-        related_name='following',
+        related_name='author',
         verbose_name='Автор',
         on_delete=models.CASCADE,
     )
@@ -66,4 +66,4 @@ class Follow(models.Model):
         unique_together = ['user', 'following']
 
     def __str__(self):
-        return f'{self.user} подписан на {self.following}'
+        return f'{self.user} подписан на {self.author}'
