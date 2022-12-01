@@ -1,12 +1,18 @@
 import os
+from os.path import join, dirname
 
 from datetime import timedelta
 
+from dotenv import load_dotenv
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'hhz7l-ltdismtf@bzyz+rple7*s*w$jak%whj@(@u0eok^f9k4'
+dotenv_path = join(dirname(__file__), 'keys.env')
+load_dotenv(dotenv_path)
 
 DEBUG = True
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 ALLOWED_HOSTS = []
 
