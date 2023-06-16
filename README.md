@@ -1,8 +1,15 @@
-Запуск проекта
+### **Описание:**
+
+Этот проект является REST API для проекта Yatube. Ссылка на основной проект:
+```
+https://github.com/Dmitriy-2022/Yatube
+```
+---
+### **Запуск проекта:**
 
 Клонировать репозиторий и перейти в него в командной строке:
 ```
-git clone https://github.com/Dmitriy-2022/api_final_yatube/
+git clone https://github.com/...
 
 cd yatube_api/
 ```
